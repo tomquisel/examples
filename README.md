@@ -1,2 +1,1 @@
-Examples
-========
+Code samples for easy access.
