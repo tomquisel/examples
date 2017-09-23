@@ -1,0 +1,33 @@
+---
+title: "R Notebook"
+output:
+  pdf_document: default
+  html_notebook: default
+---
+
+# Exploration of Bayesian Network structure learning using bnlearn
+
+Initialize:
+```{r}
+library(corrplot)
+library(bnlearn)
+data(gaussian.test)
+```
+
+Show correlation structure of test dataset:
+```{r}
+corrplot(cor(gaussian.test))
+```
+
+
+Causal structure learned by Bayesian Network learner (grow-shrink algorithm):
+```{r}
+res = gs(gaussian.test)
+plot(res)
+```
+
+Details about the learned Bayesian Network
+```{r}
+res
+```
+
